@@ -21,7 +21,7 @@ export default function Header () {
                     <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 6.75 22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3-4.5 16.5" />
                 </svg>
 
-                <p className="text-yellow-50 ml-4 font-semibold text-2xl mr-auto">AstroReads</p>
+                <p className="text-gray-200 ml-4 font-semibold text-2xl mr-auto">AstroReads</p>
 
                 {/* NavBar Links */}
                 <ul className="flex gap-6 list-none text-gray-100">

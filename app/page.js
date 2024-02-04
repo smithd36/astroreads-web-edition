@@ -1,3 +1,5 @@
+import Login from "./components/Login";
+
 /**
  * ------------------------------------------------------------------------
  * | @author Drey Smith                                                   |                     
@@ -19,12 +21,10 @@
  * | @returns { * } JSX                                                   |
  * ------------------------------------------------------------------------ 
  */
-import Background from "./components/Background";
-
 export default function Home() {
   return (
     <div>
-      <Background />
+        <Login />
     </div>
   )
 }
