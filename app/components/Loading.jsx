@@ -1,7 +1,7 @@
 'use client'
 import React, { useState, useEffect } from 'react';
 import Lottie from 'react-lottie';
-import animationData from './utils/loading.json';
+import animationData from '../utils/loading.json';
 import { Inter } from "next/font/google";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -23,7 +23,7 @@ export default function Loading({ children }) {
         // Simulate a network request
         setTimeout(() => {
             setLoading(false);
-        }, 2000);
+        }, 8000);
     }, []);
 
     return (

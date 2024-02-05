@@ -1,3 +1,4 @@
+'use client' // client side component
 /**
  * @file app/layout.js
  * @module Layout
@@ -11,20 +12,16 @@
  * @author Drey Smith
  * @date 2024-02-02
  */
-
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "./components/Header";
-import Background from "./components/Background";
+import { DndProvider } from 'react-dnd';
+import { HTML5Backend } from 'react-dnd-html5-backend';
 
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata = {
-  title: "AstroReads - Home",
-  description: "AstroReads is a personal book recommender, free library and e-reader.",
-};
-
 export default function RootLayout({ children }) {
+
   return (
     <html lang="en">
       <body className={inter.className}>
@@ -32,8 +29,9 @@ export default function RootLayout({ children }) {
           <Header />
         </header>
         <main>
-          <Background />
-          {children}
+          <DndProvider backend={HTML5Backend}>
+            { children }
+          </DndProvider>
         </main>
       </body>
     </html>

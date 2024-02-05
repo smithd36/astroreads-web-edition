@@ -1,3 +1,4 @@
+'use client' // this is how to client-side render the component
 /**
  * This component is responsible for rendering the background particles
  * It uses the tsParticles library to render the particles
@@ -9,8 +10,6 @@
  * @date 2024-02-03
  * @returns {JSX.Element} - The background particles
  */
-
-'use client' // this is how to client-side render the component
 
 import { useEffect, useMemo, useState } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
