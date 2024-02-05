@@ -17,6 +17,7 @@ import "./globals.css";
 import Header from "./components/Header";
 import { DndProvider } from 'react-dnd';
 import { HTML5Backend } from 'react-dnd-html5-backend';
+import Footer from "./components/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -33,6 +34,7 @@ export default function RootLayout({ children }) {
             { children }
           </DndProvider>
         </main>
+        <Footer />
       </body>
     </html>
   );

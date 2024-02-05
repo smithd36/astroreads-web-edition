@@ -23,7 +23,7 @@ export default function GetStarted() {
   return (
     <>
       <Background />
-      <div className="bg-white bg-opacity-60 h-screen flex items-center justify-center">
+      <div className="h-screen flex items-center justify-center mb-10">
         <div className="w-full max-w-md p-4 bg-white bg-opacity-40 rounded-md shadow-md">
           <Greeting />
           {loading ? <Loading /> : null}

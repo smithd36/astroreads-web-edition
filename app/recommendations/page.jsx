@@ -1,4 +1,5 @@
 'use client'
+
 // Import statements
 import { useState } from 'react';
 import axios from 'axios';
@@ -22,16 +23,19 @@ const Card = ({ recommendation, index, moveCard }) => {
   });
 
   return (
-    <div ref={(node) => ref(drop(node))} className="rounded-md bg-gray-500 m-2 p-4 w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5">
-      <p>Title: {recommendation.title}</p>
-      <p>Author: {recommendation.author}</p>
-      <a href={recommendation.download_url} className="text-teal-700 block">
+    <div
+      ref={(node) => ref(drop(node))}
+      className="font-bold text-sm rounded-md bg-gray-500 m-2 p-2 w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5"
+    >
+      <p className="text-base font-bold text-gray-800 mb-1">{recommendation.title}</p>
+      <p className="text-xs text-gray-600 mb-1">Author: {recommendation.author}</p>
+      <p className="text-xs text-gray-600">Publication Date: {recommendation.pub_date}</p>
+      <a href={recommendation.download_url} className="text-blue-700 block text-xs mb-1">
         Download
       </a>
-      <a href={recommendation.read_url} className="text-teal-700 block">
-        Read for Free
+      <a href={recommendation.read_url} className="text-blue-700 block text-xs mb-1">
+        Read Online
       </a>
-      <p>Publication Date: {recommendation.pub_date}</p>
     </div>
   );
 };
@@ -66,7 +70,7 @@ const GetRecommendations = () => {
       {/* Background component */}
       <Background />
 
-      <div className="min-h-screen flex flex-col">
+      <div className="min-h-screen grid m-4 p-4">
         {/* Display recommendations or handle response data as needed */}
         {recommendations.length > 0 && (
           <div className="p-4 flex-1 flex flex-wrap justify-around">
@@ -77,17 +81,22 @@ const GetRecommendations = () => {
         )}
 
         {/* Input bar and button at the bottom of the page */}
-        <div className="p-4">
-          <input
-            type="text"
-            value={inputText}
-            onChange={handleInputChange}
-            className="border p-2"
-            placeholder="Enter text here"
-          />
-          <button onClick={handleApiCall} className="bg-blue-500 text-white p-2 ml-2">
-            Get Recommendations
+        <div>
+          <div className="flex p-4 bg-white shadow-md">
+            <input
+              type="text"
+              value={inputText}
+              onChange={handleInputChange}
+              className="border p-2 flex-grow rounded-l-md bg-gray-700 bg-opacity-20"
+              placeholder="What would you like to read about?"
+            />
+            <button onClick={handleApiCall} className="bg-gray-700 text-white p-2 rounded-r-md">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="text-white dark:text-white">
+                <path d="M7 11L12 6L17 11M12 18V7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              </path>
+            </svg>
           </button>
+          </div>
         </div>
       </div>
     </>
