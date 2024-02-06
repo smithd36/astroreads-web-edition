@@ -69,7 +69,6 @@ const GetRecommendations = () => {
     <>
       {/* Background component */}
       <Background />
-
       <div className="min-h-screen grid m-4 p-4">
         {/* Display recommendations or handle response data as needed */}
         {recommendations.length > 0 && (
@@ -82,7 +81,7 @@ const GetRecommendations = () => {
 
         {/* Input bar and button at the bottom of the page */}
         <div>
-          <div className="flex p-4 bg-white shadow-md">
+          <div className="bottom-0 absolute w-11/12 flex p-4 bg-white shadow-md">
             <input
               type="text"
               value={inputText}
