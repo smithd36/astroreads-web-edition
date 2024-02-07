@@ -2,9 +2,6 @@
 import React, { useState } from 'react';
 import Loading from "../components/Loading";
 import Greeting from "./Greeting";
-import Background from '../components/Background';
-
-// Code: Login Pageimport React, { useState } from 'react';
 
 export default function GetStarted() {
   const [loading, setLoading] = useState(false);
@@ -22,7 +19,6 @@ export default function GetStarted() {
 
   return (
     <>
-      <Background />
       <div className="h-screen flex items-center justify-center mb-10">
         <div className="w-full max-w-md p-4 bg-white bg-opacity-40 rounded-md shadow-md">
           <Greeting />

@@ -27,10 +27,8 @@ export default function Loading({ children }) {
     }, []);
 
     return (
-        <html lang="en">
-            <body className={inter.className}>
-                { loading ? <Lottie options={defaultOptions} height={400} width={400} /> : children }
-            </body>
-        </html>
+        <div className={inter.className}>
+            { loading ? <Lottie options={defaultOptions} height={400} width={400} /> : children }
+        </div>
     );
 }

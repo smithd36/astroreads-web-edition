@@ -1,12 +1,12 @@
 'use client';
 import React, { useEffect, useState } from 'react';
-import Background from '../components/Background';
 import axios from 'axios';
+import Loading from '../components/Loading';
 
 export default function Page() {
     const [books, setBooks] = useState([]);
-    const [displayCount, setDisplayCount] = useState(10);
-    const [isLoading, setIsLoading] = useState(true); // New state variable
+    const [displayCount, setDisplayCount] = useState(12);
+    const [isLoading, setIsLoading] = useState(true);
 
     const handleApiCall = async () => {
         setIsLoading(true);
@@ -24,16 +24,15 @@ export default function Page() {
     }, []);
 
     const handleShowMore = () => {
-        setDisplayCount(prevCount => prevCount + 10);
+        setDisplayCount(prevCount => prevCount + 9);
     };
 
     if (isLoading) {
-        return <div>Loading...</div>; // Display a loading message while the API call is in progress
+        return <div><Loading /></div>;
     }
 
     return (
         <>
-            <Background />
             <div className="p-4">
                 <h1 className="text-2xl mb-4">Total Books: {books.length}</h1>
                 <div className="flex flex-wrap justify-around">
