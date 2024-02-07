@@ -17,8 +17,10 @@
     "react-dnd-html5-backend": "^16.0.1",
     "react-dom": "^18",
     "react-lottie": "^1.2.4",
+    "axios": "^1.6.7",
     "tsparticles": "^3.2.1"
-  },
+    },
+
   "devDependencies": {
     "autoprefixer": "^10.0.1",
     "eslint": "^8",
