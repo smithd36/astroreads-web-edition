@@ -7,7 +7,7 @@ const Suggestions = ({ handleSuggestionClick, suggestions }) => {
   const [recommendations, setRecommendations] = useState([]);
 
   return (
-    <div className="flex flex-wrap justify-around">
+    <div className="flex flex-wrap items-center justify-center">
       {suggestions.map((suggestion, index) => (
         <div
           key={index}

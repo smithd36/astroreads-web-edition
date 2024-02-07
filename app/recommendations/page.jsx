@@ -79,7 +79,7 @@ const GetRecommendations = () => {
         </div>
         {/* Display welcome component or handle response data as needed */}
         {recommendations.length === 0 ? (
-          <div className="flex items-center w-full h-full absolute">
+          <div className="flex items-center justify-center w-full h-full absolute">
             <Prompt />
             <Suggestions handleSuggestionClick={ handleSuggestionClick } suggestions={ suggestions } />
           </div>
@@ -90,7 +90,7 @@ const GetRecommendations = () => {
             ))}
           </div>
         )}
-
+  
         {/* Input bar and button at the bottom of the page */}
         <div className="bottom-0 absolute w-11/12 flex p-4 bg-white shadow-md">
           <input
