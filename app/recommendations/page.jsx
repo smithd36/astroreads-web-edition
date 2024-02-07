@@ -11,7 +11,7 @@ const GetRecommendations = () => {
   const [inputText, setInputText] = useState('');
   const [recommendations, setRecommendations] = useState([]);
   const [loading, setLoading] = useState(false);
-  const [tokens, setTokens] = useState(1);
+  const [tokens, setTokens] = useState(5);
 
   const suggestions = [
     "I like books about aliens & space invasion.",
