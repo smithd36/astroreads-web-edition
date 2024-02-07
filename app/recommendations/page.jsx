@@ -26,7 +26,7 @@ const GetRecommendations = () => {
 
     setLoading(true);
     try {
-      const response = await axios.get(`https://smithd36.pythonanywhere.com/get_recommendations_by_text/${suggestion}`);
+      const response = await axios.get("https://smithd36.pythonanywhere.com/get_recommendations_by_text/${suggestion}");
       setRecommendations(response.data.recommendations);
       tokens > 0 && setTokens(prevTokens => prevTokens - 1); // Decrement tokens on successful API call
     } catch (error) {
@@ -43,7 +43,7 @@ const GetRecommendations = () => {
 
     setLoading(true);
     try {
-      const response = await axios.get(`https://smithd36.pythonanywhere.com/get_recommendations_by_text/${inputText}`);
+      const response = await axios.get("https://smithd36.pythonanywhere.com/get_recommendations_by_text/${inputText}");
       setRecommendations(response.data.recommendations);
       setTokens(prevTokens => prevTokens - 1); // Decrement tokens on successful API call
     } catch (error) {
